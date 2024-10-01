@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">HRB App</string>
+
+    <!-- Main Heading -Hotel Booking Form -->
+    <string name="mainHeading">Hotel Booking Form</string>
+
+    <!-- Tab Items -Hotel Booking Form -->
+    <string name="tabItem1">1. Select Dates</string>
+    <string name="tabItem2">2. Select Rooms</string>
+    <string name="tabItem3">3. Contact Details</string>
+    <string name="tabItem4">4. Confirm Details</string>
+    <string name="tabItem5">5. Make Payment</string>
+
+    <!-- Tab Items -Hotel Booking Form -->
+    <string name="checkInTv">Check In</string>
+    <string name="checkInEdt">Select Date</string>
+    <string name="checkOutTv">Check Out</string>
+    <string name="checkOutEdt">Select Date</string>
+    <string name="selectRoomTv">Select Rooms :</string>
+    <string name="selectPersonTv">Select Person :</string>
+    <string name="selectRoomBtn">Select Room</string>
+
+
+    <string-array name="noOfRooms">
+        <item>1 Room</item>
+        <item>2 Room</item>
+        <item>3 Room</item>
+        <item>4 Room</item>
+    </string-array>
+
+    <string-array name="noOfPersons">
+        <item>1 Person</item>
+        <item>2 Person</item>
+        <item>3 Person</item>
+        <item>4 Person</item>
+        <item>5 Person</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

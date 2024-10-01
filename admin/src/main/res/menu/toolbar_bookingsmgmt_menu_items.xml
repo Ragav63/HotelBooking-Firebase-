@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation-view">
+
+    <group android:id="@+id/filterGrp"
+        >
+        <item
+            android:id="@+id/menu_datewise"
+            android:title="Datewise"
+            android:textColor="@color/white"
+            android:iconTint="@color/fragbackground"/>
+
+        <item
+            android:id="@+id/menu_roomwise"
+            android:title="Roomwise"
+            android:textColor="@color/white"
+            android:iconTint="@color/fragbackground"/>
+
+        <item
+            android:id="@+id/menu_pricewise"
+            android:title="Pricewise"
+            android:textColor="@color/white"
+            android:iconTint="@color/fragbackground"/>
+
+    </group>
+
+
+
+</menu>

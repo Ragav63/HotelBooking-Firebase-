@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "725618625488",
+    "project_id": "hrb-app-647bd",
+    "storage_bucket": "hrb-app-647bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725618625488:android:ea83dd26ac77eeee15c7d5",
+        "android_client_info": {
+          "package_name": "com.example.hrbapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaIQCtFWD234eceQM25NxZrllSrQ0c8r0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

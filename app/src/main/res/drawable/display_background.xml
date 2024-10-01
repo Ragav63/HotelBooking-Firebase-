@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background shape with corner radius and green border -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/fragbackground" />
+            <stroke
+                android:width="3dp"
+            android:color="@color/gold" />  <!-- Set the color of the border -->
+            <corners android:radius="10dp" /> <!-- Adjust the radius as needed -->
+        </shape>
+    </item>
+
+<!--    &lt;!&ndash; Arrow drawable &ndash;&gt;-->
+<!--    <item-->
+<!--        android:drawable="@drawable/ic_arrow_drop_down"-->
+<!--        android:gravity="end|center_vertical" />-->
+</layer-list>

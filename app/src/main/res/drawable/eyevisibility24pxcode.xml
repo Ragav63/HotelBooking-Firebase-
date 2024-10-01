@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true">
+<!--        <shape android:shape="rectangle">-->
+<!--            &lt;!&ndash; Draw the closed eye icon using lines or other shapes &ndash;&gt;-->
+<!--            &lt;!&ndash; Top line &ndash;&gt;-->
+<!--            <line-->
+<!--                android:startX="5dp"-->
+<!--                android:startY="12dp"-->
+<!--                android:endX="19dp"-->
+<!--                android:endY="12dp"-->
+<!--                android:color="@color/black"-->
+<!--                android:strokeWidth="2.5" />-->
+<!--            &lt;!&ndash; Bottom line &ndash;&gt;-->
+<!--            <line-->
+<!--                android:startX="5dp"-->
+<!--                android:startY="16dp"-->
+<!--                android:endX="19dp"-->
+<!--                android:endY="16dp"-->
+<!--                android:color="@color/black"-->
+<!--                android:strokeWidth="2dp" />-->
+<!--            &lt;!&ndash; Curve &ndash;&gt;-->
+<!--            <arc-->
+<!--                android:useLevel="false"-->
+<!--                android:innerRadius="5dp"-->
+<!--                android:outerRadius="12dp"-->
+<!--                android:startAngle="0"-->
+<!--                android:sweepAngle="360"-->
+<!--                android:color="@color/black"/>-->
+<!--        </shape>-->
+    </item>
+
+</selector>

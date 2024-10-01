@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragbackground"
+    android:orientation="vertical"
+    tools:context=".MyBookingsActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mybookglTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mybookglBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mybookglLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mybookglRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.98" />
+
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/mainbackground"
+            android:gravity="center_vertical"
+            app:layout_constraintEnd_toStartOf="@+id/mybookglRight"
+            app:layout_constraintStart_toEndOf="@+id/mybookglLeft"
+            app:layout_constraintTop_toBottomOf="@+id/mybookglTop"
+            app:layout_constraintBottom_toTopOf="@+id/mybookglBottom"
+            app:layout_constraintVertical_bias="0.0"
+            >
+
+            <TextView
+                android:id="@+id/backTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:drawableStart="@drawable/custom_back_mb"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@color/mainbackground"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+
+            <TextView
+                android:id="@+id/hbfTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="Booking Details"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/settingsImgBtn"-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:layout_gravity="end|center"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:background="@android:color/white"-->
+<!--                android:src="@drawable/settingscurve24px" />-->
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:id="@+id/svmybookingsact"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/mybookglRight"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/mybookglLeft"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintBottom_toTopOf="@+id/mybookglBottom"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mybookingsRecView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/mybookings_rec_items" />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gold">#FFB701</color>
+    <color name="mainbackground">#C9D6CF</color>
+    <color name="fragbackground">#062639</color>
+    <color name="bl_card">#343a40</color>
+    <color name="green_coral">#ABBB8F</color>
+    <color name="dark_blue">#3B5972</color>
+    <color name="back">#C5C8C6</color>
+    <color name="green">#50C40A</color>
+</resources>

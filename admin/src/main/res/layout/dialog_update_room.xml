@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/mainbackground"
+    android:padding="16dp">
+
+    <!-- Room Type EditText -->
+    <EditText
+        android:id="@+id/editRoomTypeEdt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:padding="6dp"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:inputType="text"
+        android:background="@drawable/edit_bg_border_white"
+        />
+
+
+    <!-- Room Description EditText -->
+    <EditText
+        android:id="@+id/editRoomDescEdt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:padding="6dp"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:inputType="text"
+        android:background="@drawable/edit_bg_border_white" />
+
+
+    <!-- Room Price EditText -->
+    <EditText
+        android:id="@+id/editRoomPriceEdt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:padding="6dp"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:inputType="numberDecimal"
+        android:background="@drawable/edit_bg_border_white" />
+
+
+    <!-- Room Tax EditText -->
+    <EditText
+        android:id="@+id/editRoomTaxEdt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="5dp"
+        android:padding="6dp"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:inputType="number"
+        android:background="@drawable/edit_bg_border_white" />
+
+
+</LinearLayout>

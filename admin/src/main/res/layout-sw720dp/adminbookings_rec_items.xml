@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+
+    <!-- Item 1 -->
+    <LinearLayout
+        android:id="@+id/bookingll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="4dp"
+        android:background="@drawable/card_corner_curve_white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/recadminbookingglCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+
+
+            <LinearLayout
+                android:id="@+id/adrecitleftll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                app:layout_constraintEnd_toStartOf="@+id/recadminbookingglCenter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+
+
+                <!-- Booking ID -->
+                <TextView
+                    android:id="@+id/bookingIdTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Booking Mail Id :"
+                    android:textColor="@color/mainbackground"
+                    android:textSize="18sp"
+                     />
+
+                <!-- Customer Name -->
+                <TextView
+                    android:id="@+id/customerBookingName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Customer Name :"
+                    android:textColor="@color/mainbackground"
+                    android:textSize="18sp"
+                    />
+
+                <!-- Customer Check in Date -->
+                <TextView
+                    android:id="@+id/customerBookingcindate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Check In Date :"
+                    android:textColor="@color/mainbackground"
+                    android:textSize="18sp"
+                    />
+
+                <!-- Customer Room -->
+                <TextView
+                    android:id="@+id/customerBookingRoom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Room :"
+                    android:textColor="@color/mainbackground"
+                    android:textSize="18sp"
+                    />
+
+                <!-- Customer Price -->
+                <TextView
+                    android:id="@+id/customerBookingPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Price :"
+                    android:textColor="@color/mainbackground"
+                    android:textSize="18sp"
+                    />
+
+                <!-- Payment  -->
+                <TextView
+                    android:id="@+id/customerPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Payment :"
+                    android:textColor="@color/mainbackground"
+                    android:textSize="18sp"
+                    />
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/adrecitrightll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/recadminbookingglCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                >
+
+                <!-- Booking ID Value -->
+                <TextView
+                    android:id="@+id/bookingMailIdTvVal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/mainbackground"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    />
+
+                <!-- Customer Name Value -->
+                <TextView
+                    android:id="@+id/customerBookingNameVal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    android:textColor="@color/mainbackground"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    />
+
+                <!-- Customer Check in Date -->
+                <TextView
+                    android:id="@+id/customerBookingcindateVal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    android:textColor="@color/mainbackground"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    />
+
+                <!-- Customer Room -->
+                <TextView
+                    android:id="@+id/customerBookingRoomVal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    android:textColor="@color/mainbackground"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    />
+
+                <!-- Customer Price -->
+                <TextView
+                    android:id="@+id/customerBookingPriceVal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    android:textColor="@color/mainbackground"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    />
+
+
+                <!-- Customer Name Value -->
+                <TextView
+                    android:id="@+id/customerPaymentVal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Completed"
+                    android:textColor="@color/mainbackground"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/adrecitleftll">
+
+                <Button
+                    android:id="@+id/bookingRejectBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/red"
+                    android:text="REJECT"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/bookingApproveBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:backgroundTint="@color/green"
+                    android:text="APPROVE"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/bookingViewBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:backgroundTint="@color/fragbackground"
+                    android:text="VIEW"
+                    android:textColor="@color/mainbackground"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

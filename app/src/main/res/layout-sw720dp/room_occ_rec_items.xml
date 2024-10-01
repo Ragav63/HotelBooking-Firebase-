@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/fragbackground"
+    >
+
+    <!-- Item 1 -->
+    <LinearLayout
+        android:id="@+id/hll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:padding="4dp"
+        android:orientation="horizontal"
+        android:background="@drawable/card_corner_curve_bl">
+
+
+        <!-- Room Type -->
+        <RadioButton
+            android:id="@+id/rbroomOccType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Single"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:checked="true"/>
+
+
+        <!-- Price -->
+        <TextView
+            android:id="@+id/roomOccPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="Rs. 1000"
+            android:textColor="@color/gold"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- TAX -->
+        <TextView
+            android:id="@+id/roomOccTax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:layout_marginRight="20dp"
+            android:text="5%"
+            android:textColor="@color/gold"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

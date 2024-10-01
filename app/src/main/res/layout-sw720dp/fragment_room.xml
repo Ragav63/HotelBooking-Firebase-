@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragbackground"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toTopOf="@+id/roomfglBottom"
+    app:layout_constraintEnd_toStartOf="@+id/roomfglRight"
+    app:layout_constraintStart_toEndOf="@+id/roomfglLeft"
+    app:layout_constraintTop_toBottomOf="@+id/roomfglTop"
+    tools:context=".RoomFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/roomfglTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/roomfglBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/roomfglLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/roomfglRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.98" />
+
+
+    <ScrollView
+        android:id="@+id/svroomFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/roomfglBottom"
+        app:layout_constraintEnd_toStartOf="@+id/roomfglRight"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/roomfglLeft"
+        app:layout_constraintTop_toBottomOf="@+id/roomfglTop"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rTyTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Room Type :"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="600dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:clipToPadding="false"
+                tools:listitem="@layout/room_rec_items"
+                android:id="@+id/roomRecView"/>
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/rOccTv"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:text="Room Occupancy :"-->
+            <!--                android:textSize="18sp"-->
+            <!--                android:textColor="@color/white"-->
+            <!--                android:textStyle="bold"/>-->
+
+            <!--            <androidx.recyclerview.widget.RecyclerView-->
+            <!--                android:layout_width="600dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="10dp"-->
+            <!--                android:layout_gravity="center"-->
+            <!--                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+            <!--                android:clipToPadding="false"-->
+            <!--                tools:listitem="@layout/room_occ_rec_items"-->
+            <!--                android:id="@+id/roomRVOcc"/>-->
+
+
+            <TextView
+                android:id="@+id/othFacTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Other Facilities :"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="600dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:clipToPadding="false"
+                tools:listitem="@layout/room_fac_rec_items"
+                android:id="@+id/roomRVFac"/>
+
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/selectDetailsBtn"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btn_corner_curve_white"
+                android:text="Select Details"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="600dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/img_corner_curve"
+                android:padding="10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/roomfglCenter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/roomfglCenter"
+                        app:layout_constraintStart_toEndOf="parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:text="Room Type"
+                            android:textColor="@color/fragbackground"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:padding="4dp"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Room Description"
+                            android:textColor="@color/fragbackground"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:text="Room Price"
+                            android:textColor="@color/fragbackground"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:text="Tax"
+                            android:textColor="@color/fragbackground"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"
+                            />
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="80dp"-->
+<!--                            android:padding="4dp"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="Other Fac Title"-->
+<!--                            android:textColor="@color/fragbackground"-->
+<!--                            android:textSize="16sp"-->
+<!--                            android:textStyle="bold"-->
+<!--                            android:layout_marginTop="5dp"-->
+<!--                            />-->
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:text="Other Facility"
+                            android:textColor="@color/fragbackground"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:text="Total"
+                            android:textColor="@color/fragbackground"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@id/roomfglCenter"
+                        app:layout_constraintTop_toBottomOf="parent"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            >
+
+                            <androidx.constraintlayout.widget.Guideline
+                                android:id="@+id/roomOutfglCenter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                app:layout_constraintGuide_percent="0.3" />
+
+
+                            <TextView
+                                android:id="@+id/roomTypeVal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="value"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:background="@color/bl_card"
+                                android:textColor="@color/gold"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="parent"
+                                />
+
+                            <TextView
+                                android:id="@+id/roomDescVal"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:text="value"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/bl_card"
+                                android:textColor="@color/gold"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/roomTypeVal"
+                                />
+
+
+
+                            <TextView
+                                android:id="@+id/inrTV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="INR"
+                                android:padding="4dp"
+                                android:background="@color/bl_card"
+                                android:textColor="@color/gold"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="5dp"
+                                app:layout_constraintEnd_toEndOf="@id/roomOutfglCenter"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/roomDescVal"
+                                />
+
+
+
+                            <TextView
+                                android:id="@+id/roomPriceVal"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:text="value"
+                                android:background="@color/bl_card"
+                                android:textColor="@color/gold"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="5dp"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="@id/roomOutfglCenter"
+                                app:layout_constraintTop_toBottomOf="@id/roomDescVal"/>
+
+
+                            <TextView
+                                android:id="@+id/per"
+                                android:layout_width="38dp"
+                                android:layout_height="wrap_content"
+                                android:padding="4dp"
+                                android:text="%"
+                                android:gravity="center"
+                                android:background="@color/bl_card"
+                                android:textColor="@color/gold"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="5dp"
+                                app:layout_constraintEnd_toEndOf="@id/roomOutfglCenter"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/roomPriceVal"
+                                />
+
+                            <TextView
+                                android:id="@+id/roomTaxVal"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:text="value"
+                                android:background="@color/bl_card"
+                                android:textColor="@color/gold"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="5dp"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="@id/roomOutfglCenter"
+                                app:layout_constraintTop_toBottomOf="@id/roomPriceVal"/>
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/roomOFTitleVal"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="80dp"-->
+<!--                                android:gravity="center"-->
+<!--                                android:padding="4dp"-->
+<!--                                android:layout_marginTop="5dp"-->
+<!--                                android:background="@color/bl_card"-->
+<!--                                android:textColor="@color/gold"-->
+<!--                                android:textSize="16sp"-->
+<!--                                android:textStyle="bold"-->
+<!--                                app:layout_constraintHorizontal_bias="0.0"-->
+<!--                                app:layout_constraintStart_toStartOf="parent"-->
+<!--                                app:layout_constraintTop_toBottomOf="@id/roomTaxVal"-->
+<!--                                />-->
+
+
+                            <TextView
+                                android:id="@+id/inrTV2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="4dp"
+                                android:text="INR"
+                                android:background="@color/bl_card"
+                                android:textColor="@color/gold"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="5dp"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/per"
+                                app:layout_constraintEnd_toEndOf="@id/roomOutfglCenter"
+                                />
+
+
+
+                            <TextView
+                                android:id="@+id/roomOFVal"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:text="value"
+                                android:background="@color/bl_card"
+                                android:textColor="@color/gold"
+                                android:textSize="16sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="5dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="@id/roomOutfglCenter"
+                                app:layout_constraintTop_toBottomOf="@id/roomTaxVal"
+                                />
+
+                            <TextView
+                                android:id="@+id/inrTV3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="4dp"
+                                android:text="INR"
+                                android:background="@color/bl_card"
+                                android:textColor="@color/gold"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="5dp"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/inrTV2"
+                                app:layout_constraintEnd_toEndOf="@id/roomOutfglCenter"
+                                />
+
+                            <TextView
+                                android:id="@+id/roomTotalVal"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:padding="4dp"
+                                android:text="value"
+                                android:background="@color/bl_card"
+                                android:textColor="@color/gold"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:layout_marginTop="5dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.0"
+                                app:layout_constraintStart_toStartOf="@id/roomOutfglCenter"
+                                app:layout_constraintTop_toBottomOf="@id/inrTV2"
+                                />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

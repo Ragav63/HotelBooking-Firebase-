@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainbackground"
+    tools:context=".HomeActivity">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mainglTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mainglBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mainglLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mainglRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:id="@+id/mainll"
+        app:layout_constraintTop_toBottomOf="@+id/mainglTop"
+        app:layout_constraintEnd_toStartOf="@+id/mainglRight"
+        app:layout_constraintBottom_toTopOf="@+id/mainglBottom"
+        app:layout_constraintStart_toEndOf="@+id/mainglLeft"
+        tools:ignore="MissingConstraints">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical">
+
+
+            <TextView
+                android:id="@+id/hbfTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:text="@string/mainHeading"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/settingsImgBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/settingscurve24px"
+                android:layout_gravity="end"
+                android:layout_margin="15dp"
+                android:background="@android:color/white"/>
+
+
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+        <ImageView
+            android:id="@+id/homeImg"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/hotelimg"
+            app:layout_constraintTop_toBottomOf="@+id/mainglTop"
+            app:layout_constraintEnd_toStartOf="@+id/mainglRight"
+            app:layout_constraintBottom_toTopOf="@+id/mainglBottom"
+            app:layout_constraintStart_toEndOf="@+id/mainglLeft"
+            android:background="@drawable/img_corner_curve"
+            tools:ignore="MissingConstraints" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/homeImg"
+            app:layout_constraintEnd_toStartOf="@+id/mainfglRight"
+            app:layout_constraintStart_toEndOf="@+id/mainfglLeft"
+            app:layout_constraintTop_toBottomOf="@+id/homeImg"
+            android:background="@color/fragbackground"
+            tools:ignore="NotSibling">
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/include"
+                app:tabTextColor="@color/white"
+                app:tabMaxWidth="90dp"
+                app:tabPadding="0dp"
+                app:tabSelectedTextColor="@color/gold"
+                app:tabIndicatorColor="@color/gold"
+                app:tabIndicator="@color/white"
+                app:tabIndicatorHeight="3.5dp"
+                app:tabIndicatorFullWidth="true"
+                app:tabPaddingStart="10dp"
+                android:layout_marginTop="0dp"
+                app:tabMode="scrollable"
+                android:backgroundTint="@android:color/transparent">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tabItem1"
+                    android:id="@+id/selectDates">
+
+                </com.google.android.material.tabs.TabItem>
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tabItem2"
+                    android:id="@+id/selectRooms">
+
+                </com.google.android.material.tabs.TabItem>
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tabItem3"
+                    android:id="@+id/contactDetails">
+
+                </com.google.android.material.tabs.TabItem>
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tabItem4"
+                    android:id="@+id/confirmDetails">
+
+                </com.google.android.material.tabs.TabItem>
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tabItem5"
+                    android:id="@+id/makePayment">
+
+                </com.google.android.material.tabs.TabItem>
+
+
+
+
+            </com.google.android.material.tabs.TabLayout>
+
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/include"
+                android:layout_marginTop="0dp"
+                android:id="@+id/fragmentcontainer">
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

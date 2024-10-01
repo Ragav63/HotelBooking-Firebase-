@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Customize background color -->
+        <item name="android:background">@drawable/dialog_background_white</item>
+    </style>
+
+    <style name="AlertDialogButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <!-- Customize button text color -->
+        <item name="android:textColor">@color/white</item>
+        <!-- Customize button background color -->
+        <item name="android:backgroundTint">@color/mainbackground</item>
+    </style>
+
+</resources>

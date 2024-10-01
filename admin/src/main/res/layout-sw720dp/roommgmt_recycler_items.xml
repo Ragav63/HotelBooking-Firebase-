@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+
+    <!-- Item 1 -->
+    <LinearLayout
+        android:id="@+id/hrcviMaths"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="4dp"
+        android:background="@drawable/card_corner_curve_white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/roommgmtrecglCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toStartOf="@+id/roommgmtrecglCenter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+
+
+                <!-- Item Title -->
+                <TextView
+                    android:id="@+id/itypeTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Room Type :"
+                    android:textColor="@color/mainbackground"
+                    android:textSize="18sp"
+                     />
+
+                <!-- Item Description -->
+                <TextView
+                    android:id="@+id/idescriptionTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Room Description :"
+                    android:textColor="@color/mainbackground"
+                    android:textSize="18sp"
+                    />
+
+                <!-- Item Price -->
+                <TextView
+                    android:id="@+id/ipriceTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Item Price :"
+                    android:textColor="@color/mainbackground"
+                    android:textSize="18sp"
+                    />
+
+
+                <!-- Item Tax -->
+                <TextView
+                    android:id="@+id/itaxTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Item Tax :"
+                    android:textColor="@color/mainbackground"
+                    android:textSize="18sp"
+                    />
+
+                <Button
+                    android:id="@+id/roomrecDeleteBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/red"
+                    android:text="DELETE"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/roommgmtrecglCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                >
+
+                <!-- Item Title -->
+                <TextView
+                    android:id="@+id/roomTypeTvVal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/mainbackground"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    />
+
+                <!-- Item Description -->
+                <TextView
+                    android:id="@+id/roomDesTvVal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    android:textColor="@color/mainbackground"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    />
+
+                <!-- Item Price -->
+                <TextView
+                    android:id="@+id/roomPriceTvVal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    android:textColor="@color/mainbackground"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    />
+
+
+                <!-- Item Tax -->
+                <TextView
+                    android:id="@+id/roomtaxTvVal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text=""
+                    android:textColor="@color/mainbackground"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    />
+
+                <Button
+                    android:id="@+id/roomrecUpdateBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/green"
+                    android:text="UPDATE"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+
+            </LinearLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/fragbackground"
+    tools:context=".PaymentFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mpfglTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mpfglBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mpfglLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/mpfglRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.98" />
+
+
+    <ScrollView
+        android:id="@+id/svroomFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/mpfglBottom"
+        app:layout_constraintEnd_toStartOf="@+id/mpfglRight"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/mpfglLeft"
+        app:layout_constraintTop_toBottomOf="@+id/mpfglTop"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toStartOf="@+id/mpfglRight"
+            app:layout_constraintStart_toEndOf="@+id/mpfglLeft"
+            app:layout_constraintTop_toBottomOf="@+id/mpfglTop">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/mpfglCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+
+
+
+            <LinearLayout
+                android:id="@+id/ccnumll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/mpfglCenter"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <TextView
+                    android:id="@+id/ccnumTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Credit Card Number"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                     />
+
+                <EditText
+                    android:id="@+id/ccnumEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:padding="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:maxLength="16"
+                    android:hint="xxxx xxxx xxxx xxxx"
+                    android:inputType="number"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="DuplicateIds" />
+
+                <TextView
+                    android:id="@+id/ccNameTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Name on Credit Card"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                     />
+
+                <EditText
+                    android:id="@+id/ccNameEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:padding="10dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:maxLength="20"
+                    android:hint="Full Name as Displayed on Card"
+                    android:inputType="text"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    />
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cvvexpll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/mpfglCenter"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/cvvTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="CVV"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                     />
+
+                <EditText
+                    android:id="@+id/cvvEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:padding="10dp"
+                    android:maxLength="3"
+                    android:inputType="numberPassword"
+                    android:hint="x12"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/expOnTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Expired On:"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/expDateEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:padding="10dp"
+                    android:hint="MM/YY"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+
+
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bookNowbtn"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:text="Book Now"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/btn_corner_curve_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ccnumll"/>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

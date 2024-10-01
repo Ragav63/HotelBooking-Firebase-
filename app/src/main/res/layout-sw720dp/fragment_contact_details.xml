@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragbackground"
+    app:layout_constraintBottom_toTopOf="@+id/cdetailsfglBottom"
+    app:layout_constraintEnd_toStartOf="@+id/cdetailsfglRight"
+    app:layout_constraintStart_toStartOf="@+id/cdetailsfglLeft"
+    app:layout_constraintTop_toBottomOf="@+id/cdetailsfglTop"
+    tools:context=".ContactDetailsFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/cdetailsfglTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/cdetailsfglBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/cdetailsfglLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/cdetailsfglRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.98" />
+
+
+
+
+    <ScrollView
+        android:id="@+id/svroomFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/cdetailsfglBottom"
+        app:layout_constraintEnd_toStartOf="@+id/cdetailsfglRight"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/cdetailsfglLeft"
+        app:layout_constraintTop_toBottomOf="@+id/cdetailsfglTop"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toStartOf="@+id/cdetailsfglRight"
+            app:layout_constraintStart_toEndOf="@+id/cdetailsfglLeft"
+            app:layout_constraintTop_toBottomOf="@+id/cdetailsfglTop">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/cdetailsfglCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+
+            <LinearLayout
+                android:id="@+id/fnamell"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/cdetailsfglCenter"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints,NotSibling,UnknownId">
+
+                <TextView
+                    android:id="@+id/fNameTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:padding="10dp"
+                    android:text="First Name"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                     />
+
+
+                <EditText
+                    android:id="@+id/fnameEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:hint="Enter your First Name"
+                    android:inputType="text"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:maxLength="20"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnamell"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/cdetailsfglCenter"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="NotSibling">
+
+
+                <TextView
+                    android:id="@+id/lNameTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Last Name"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                   />
+
+                <EditText
+                    android:id="@+id/lnameEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:hint="Enter your Last Name"
+                    android:ellipsize="end"
+                    android:inputType="text"
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llothers"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fnamell"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/emailTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Email Address"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/emailEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:hint="Enter Your Email Address"
+                    android:inputType="textEmailAddress"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/fuladdTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Full Address"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/fulladdEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:hint="Enter Your Full Address"
+                    android:maxLength="50"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/postTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fulladdEdt"
+                    android:padding="10dp"
+                    android:text="Post Code"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/postcodeEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/postTv"
+                    android:hint="Enter Your Postal Code"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/mobileTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/postcodeEdt"
+                    android:padding="10dp"
+                    android:text="Mobile Number"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    tools:ignore="MissingConstraints" />
+
+                <EditText
+                    android:id="@+id/phnumEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_below="@+id/mobileTv"
+                    android:hint="Enter Your Phone Number"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="MissingConstraints" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/confirmDetailsBtn"
+                    android:layout_width="180dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/btn_corner_curve_white"
+                    android:padding="8dp"
+                    android:text="Confirm Details"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="MissingConstraints" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
