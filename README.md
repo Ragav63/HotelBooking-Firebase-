@@ -95,7 +95,7 @@ Ensure you have the following Firebase services enabled in your project:
 - Contributions are welcome! Please open an issue or submit a pull request for any changes or improvements.
 
 ## License
-- **This project is licensed under the MIT License - see the LICENSE file for details**.
+- **This project is licensed under the MIT License - see the [LICENSE](arulragavendiran@gmail.com) file for details**.
 
 ## Acknowledgements
 - [Firebase](https://console.firebase.google.com/)
