@@ -102,4 +102,4 @@ Ensure you have the following Firebase services enabled in your project:
 - [Android Studio](https://developer.android.com/)
 
 ## Contact
-If you have any questions or feedback, feel free to reach out to me at [arulragavendiran@gmail.com].
+If you have any questions or feedback, feel free to reach out to me at **arulragavendiran@gmail.com**.
